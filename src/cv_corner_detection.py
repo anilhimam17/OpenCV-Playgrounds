@@ -2,8 +2,6 @@ import numpy as np
 import cv2
 from sys import argv
 
-from numpy._core.numerictypes import int32
-
 
 def detect_corners_img(path: str) -> None:
     # Reading an Image
@@ -31,7 +29,7 @@ def detect_corners_img(path: str) -> None:
     The detected corners are drawn seperately.
     """
     corners = cv2.goodFeaturesToTrack(img_grayscale, 100, 0.5, 10)
-    corners = np.array(corners, dtype=int32)
+    corners = np.array(corners, dtype=np.int32)
     n_corners = corners.shape[0]
 
     # Drawing the Corners on the Image
@@ -65,7 +63,7 @@ def detect_corners_video() -> None:
 
         # Searching for corners in the stream
         corners = cv2.goodFeaturesToTrack(frame_gray, 100, 0.5, 10)
-        corners = np.array(corners, dtype=int32)
+        corners = np.array(corners, dtype=np.int32)
         n_corners = corners.shape[0]
 
         # Drawing the Corners
