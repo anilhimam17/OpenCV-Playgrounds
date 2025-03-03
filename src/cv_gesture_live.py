@@ -10,7 +10,7 @@ GestureRecognizerOptions = mp.tasks.vision.GestureRecognizerOptions
 VisionRunningMode = mp.tasks.vision.RunningMode
 
 # Model Path
-MODEL_PATH = "/Users/goduguanilhimam/Downloads/gesture_recognizer.task"
+MODEL_PATH = "./models/gesture_recognizer.task"
 
 # Variable to store the recognized gestures asynchronously
 recognized_gesture = None
