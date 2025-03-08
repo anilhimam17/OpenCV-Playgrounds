@@ -24,7 +24,7 @@ options = HandLandmarkerOptions(
 VIDEO_PATH = "/Users/goduguanilhimam/Downloads/hand_landmarker.mov"
 
 # OpenCV Capture Channel
-capture = cv2.VideoCapture(VIDEO_PATH)
+capture = cv2.VideoCapture(0)
 
 # Control Variable to ensure the increasing count of timestamps
 last_timestamp = 0
